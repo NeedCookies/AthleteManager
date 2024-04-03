@@ -32,14 +32,23 @@ namespace backend.Core.Context
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Competition>()
-                .HasMany(c => c.competitors)
-                .WithMany(a => a.competitions);
+                .HasMany(c => c.Competitors)
+                .WithMany(a => a.Competitions);
 
             modelBuilder.Entity<Competition>()
                 .HasOne(c => c.Winner)
                 .WithOne()
                 .HasForeignKey<Competition>(c => c.WinnerId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Competition>()
+                .Property(c => c.Rang)
+                .HasConversion<string>();
+
+            modelBuilder.Entity<Athlete>()
+                .Property(a => a.Region)
+                .HasConversion<string>();
+
         }
     }
 }

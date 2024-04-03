@@ -1,4 +1,6 @@
-﻿namespace backend.Core.Enums
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace backend.Core.Enums
 {
     public enum Rangs
     {

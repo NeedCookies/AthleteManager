@@ -16,7 +16,7 @@ namespace backend.Core.Entities
         [RegularExpression(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", ErrorMessage = "Некорректный Email")]
         public string Email { get; set; }
 
-        public ICollection<Competition> competitions { get; set; }
+        public ICollection<Competition> Competitions { get; set; }
         public int SportId { get; set; }
         public Sport Sport { get; set; }
     }

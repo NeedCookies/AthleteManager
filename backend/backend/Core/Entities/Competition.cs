@@ -12,6 +12,6 @@ namespace backend.Core.Entities
         public int SportId { get; set; }
         public Sport Sport { get; set; }
 
-        public ICollection<Athlete> competitors { get; set; } 
+        public ICollection<Athlete> Competitors { get; set; } 
     }
 }
