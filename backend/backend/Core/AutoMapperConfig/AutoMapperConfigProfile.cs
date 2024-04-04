@@ -10,6 +10,10 @@ namespace backend.Core.AutoMapperConfig
         {
             CreateMap<SportCreateDto, Sport>();
             CreateMap<Sport, SportGetDto>();
+
+            CreateMap<CompetitionCreateDto, Competition>();
+            CreateMap<Competition, CompetitionGetDto>()
+                .ForMember(c => c.SportName, opt => opt.MapFrom(src => src.Sport.Name));
         }
     }
 }
