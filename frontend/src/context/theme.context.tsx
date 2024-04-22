@@ -18,7 +18,7 @@ const ThemeContextProvider = ({children}: IThemeContextProviderProps) => {
     const [darkMode, setDarkMode] = useState<boolean>(false);
 
     const toggleDarkMode: () => void = () => {
-        setDarkMode(prevState => !prevState);
+        setDarkMode((prevState) => !prevState);
     }
 
     return <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>{children}</ThemeContext.Provider>;
